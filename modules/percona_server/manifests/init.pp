@@ -2,11 +2,6 @@
  class percona_server (
  	$config
  ) {
-	 package { 'mysql-*':
-		 ensure  => absent,
-		 require => Package['mysql-server']
-	 }
-
 	 exec { 'wget_percona_deb':
 		 command => 'wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb',
 		 path    => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ],
