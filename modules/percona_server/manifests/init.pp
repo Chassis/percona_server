@@ -28,6 +28,6 @@
 
 	 package { 'percona-server-server-5.7':
 		 ensure  => installed,
-		 require => Exec['dpkg_percona'],
+		 require => Exec['percona_apt_update'],
 	 }
  }
